@@ -2,7 +2,7 @@
   "name": "grunt-motion-build",
   "description": "build motion as your wish",
   "version": "0.1.0",
-  "homepage": "https://github.com/aidenxiong/node_modules",
+  "homepage": "https://tgideas.github.com/",
   "author": {
     "name": "Aiden Xiong",
     "email": "github@sina.cn",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/aidenxiong/node_modules.git"
+    "url": "git://github.com/tgideas/grunt-motion-build.git"
   },
   "bugs": {
-    "url": "https://github.com/aidenxiong/node_modules/issues"
+    "url": "https://github.com/tgideas/grunt-motion-build/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/aidenxiong/node_modules/blob/master/LICENSE-MIT"
+      "url": "https://github.com/tgideas/grunt-motion-build/blob/master/LICENSE-MIT"
     }
   ],
   "engines": {
