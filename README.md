@@ -25,65 +25,31 @@ In your project's Gruntfile, add a section named `motion_build` to the data obje
 ```js
 grunt.initConfig({
   motion_build: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
+    dev: {
+      options: {
+      },
+      files: [
+        {
+          expand: true,
+          cwd: 'src/main/',
+          filter : 'isFile',
+          src: '**/*',
+          dest: 'build/'
+        }
+      ]
+    }
+  }
 });
 ```
 
 ### Options
 
-#### options.separator
+相关配置和seajs可一致，当前文件的根目录认为是seajs的根目录
+
+唯一不同的的配置参数为dest
+
+#### options.dest
 Type: `String`
-Default value: `',  '`
+Default value: `'build/'`
 
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
-
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
-```js
-grunt.initConfig({
-  motion_build: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  motion_build: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_
+打包完的代码输出路径.
