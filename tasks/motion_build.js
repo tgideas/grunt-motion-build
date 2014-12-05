@@ -197,7 +197,6 @@ function parseMap(uri, data) {
   var parseDependenciesTree = function(filepath, data){
       filepath = [].concat(filepath);
       var buf=[].concat(filepath);
-      console.log(buf,'b==============uf')
       function parse(fileId, refUri, data) {
         var filepath = id2Uri(fileId, refUri, data);
         if(!grunt.file.exists(filepath)){ //file not found
@@ -266,7 +265,6 @@ function parseMap(uri, data) {
         return self.indexOf(value) === index;
       });
     });
-    // console.log(dependencies,'<<<<<<<<<<<<<<<<<<')
     dependencies = dependencies.map(function(filepath){
       var code = '';
       if(filepath === CSSFILE_HOLDER){
