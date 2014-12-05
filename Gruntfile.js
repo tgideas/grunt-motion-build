@@ -1,6 +1,6 @@
 /*
  * grunt-motion-build
- * https://github.com/aidenxiong/node_modules
+ * https://github.com/tgideas/grunt-motion-build
  *
  * Copyright (c) 2014 Aiden Xiong
  * Licensed under the MIT license.
