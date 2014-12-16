@@ -1,7 +1,7 @@
 {
   "name": "grunt-motion-build",
   "description": "build motion as your wish",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "homepage": "https://tgideas.github.com/",
   "author": {
     "name": "Aiden Xiong",

@@ -274,7 +274,7 @@ function parseMap(uri, data) {
         if(filepath.indexOf('.css') != -1){ // load css file
           code = code.split(/\r\n|\r|\n/).map(function(line) {
             return line.replace(/\\/g, '\\\\');
-          }).join('\n').replace(/\'/g, '\\\'');
+          }).join('\\\n').replace(/\'/g, '\\\'');
           code = "importStyle('" + code + "');";
         }
       }
