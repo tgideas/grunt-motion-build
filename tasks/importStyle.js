@@ -1,9 +1,9 @@
 var importStyle = (function(){
-  var RE_NON_WORD = /\W/g
-  var doc = document
+  var RE_NON_WORD = /\W/g;
+  var doc = document;
   var head = document.getElementsByTagName('head')[0] ||
-      document.documentElement
-  var styleNode
+      document.documentElement;
+  var styleNode;
   /**
    * import css string to docuemnt
    * @param  {[type]} cssText [description]
@@ -13,31 +13,31 @@ var importStyle = (function(){
   return function(cssText, id) {
     if (id) {
       // Convert id to valid string
-      id = id.replace(RE_NON_WORD, '-')
+      id = id.replace(RE_NON_WORD, '-');
 
       // Don't add multiple times
-      if (doc.getElementById(id)) return
+      if (doc.getElementById(id)) return;
     }
 
-    var element
+    var element;
 
     // Don't share styleNode when id is spectied
     if (!styleNode || id) {
-      element = doc.createElement('style')
-      id && (element.id = id)
+      element = doc.createElement('style');
+      id && (element.id = id);
 
       // Adds to DOM first to avoid the css hack invalid
-      head.appendChild(element)
+      head.appendChild(element);
     } else {
-      element = styleNode
+      element = styleNode;
     }
 
    
-    element.appendChild(doc.createTextNode(cssText))
+    element.appendChild(doc.createTextNode(cssText));
 
     if (!id) {
-      styleNode = element
+      styleNode = element;
     }
   }
 });
-exports.importStyle = 'var importStyle = ' + importStyle.toString() + '()';
+exports.importStyle = 'var importStyle = ' + importStyle.toString() + '();';
