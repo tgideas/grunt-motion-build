@@ -40,4 +40,4 @@ var importStyle = (function(){
     }
   }
 });
-exports.importStyle = 'var importStyle = ' + importStyle.toString();
+exports.importStyle = 'var importStyle = ' + importStyle.toString() + '()';
